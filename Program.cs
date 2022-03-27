@@ -66,8 +66,6 @@ namespace CMP1903M_Assessment_1_Base_Code
             string analysedText = inputText;
             parameters = analyse.analyseText(inputText);
 
-            Console.WriteLine(inputText);
-
             //Receive a list of integers back
 
             List<int> parametersList = parameters;
