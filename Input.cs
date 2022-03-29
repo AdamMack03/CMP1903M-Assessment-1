@@ -10,6 +10,7 @@ namespace CMP1903M_Assessment_1_Base_Code
     {
         //Handles the text input for Assessment 1
         string text;
+        List<string> paragraph = new List<string>();
 
         //Method: manualTextInput
         //Arguments: none
@@ -20,15 +21,20 @@ namespace CMP1903M_Assessment_1_Base_Code
             while (true)
             {
                 text = Console.ReadLine();
-                if (text == "")
+                int textLength = text.Length;
+
+                if (text[textLength - 1] == '*')
                 {
-                    Console.WriteLine("Looks like you forgot to type what you wanted to have analysed.\nFeel free to try again.");
-                    continue;
+                    paragraph.Add(text);
+                    text = string.Join("", paragraph.ToArray());
+                    break;
                 }
                 else
                 {
-                    break;
+                    paragraph.Add(text);
+                    continue;
                 }
+                
             }
             return text;
         }

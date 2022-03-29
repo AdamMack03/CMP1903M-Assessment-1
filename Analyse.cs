@@ -31,9 +31,10 @@ namespace CMP1903M_Assessment_1_Base_Code
                 values.Add(0);
             }
 
+
             for (int i = 0; i < input.Length; i++)
             {
-            //Counts sentences
+                //Counts sentences
                 if (input[i] == '.' || input[i] == '!' || input[i] == '?')
                 {
                     values[0]++;

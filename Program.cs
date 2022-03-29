@@ -30,7 +30,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                 choice = Console.ReadLine();
                 if (choice == "1")
                 {
-                    Console.WriteLine("Option 1 selected.Write what you want to have analysed.");
+                    Console.WriteLine("Option 1 selected. Write what you want to have analysed.\nEnter an asterisk (*) at the end if you don't want to start a new paragraph.");
                     inputText = input.manualTextInput();
                     break;
                 }
@@ -59,6 +59,8 @@ namespace CMP1903M_Assessment_1_Base_Code
                     continue;
                 }
             }
+
+            Console.WriteLine(inputText);
 
             //Create an 'Analyse' object
             //Pass the text input to the 'analyseText' method
